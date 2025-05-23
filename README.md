@@ -9,7 +9,6 @@ A simple and elegant React-based Expense Tracker that helps users manage their d
 - 🔍 Search/filter transactions by text
 - 📊 Automatically calculate total balance, income, and expense
 - 🔄 Real-time updates using React hooks and state
-- 🎨 Responsive UI with minimal and clean design
 
 ## 🛠 Tech Stack
 
