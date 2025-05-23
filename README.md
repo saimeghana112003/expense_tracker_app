@@ -1,6 +1,6 @@
 # 💸 Expense Tracker
 
-A simple and elegant React-based Expense Tracker that helps users manage their daily finances by tracking income and expenses. It supports adding, deleting, filtering transactions, and gives a clean summary of spending habits.
+A simple Expense Tracker that helps users manage their daily finances by tracking income and expenses. It supports adding, deleting, filtering transactions, and gives a clean summary of spending habits.
 
 ## 🚀 Features
 
