@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import AddTransaction from "./AddTransaction";
 import OverviewComponent from "./OverviewComponent";
@@ -70,23 +70,25 @@ const Tracker = () => {
         setTransactions(updatedTransactions);
     };
 
-    const calculateTransactions = () => {
+    const calculateTransactions = useCallback(() => {
         let exp = 0;
         let inc = 0;
 
-        transactions.map((item) => {
-            item.transType === "expense"
-                ? (exp = exp + item.amount)
-                : (inc = inc + item.amount);
+        transactions.forEach((item) => {
+            if (item.transType === "expense") {
+                exp += item.amount;
+            } else {
+                inc += item.amount;
+            }
         });
 
         setExpense(exp);
         setIncome(inc);
-    };
+    }, [transactions]);
 
     useEffect(() => {
         calculateTransactions();
-    }, [transactions]);
+    }, [calculateTransactions]);
 
     return (
         <Container>
